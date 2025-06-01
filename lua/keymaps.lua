@@ -30,7 +30,7 @@ vim.keymap.set('n', '<C-h>', '<C-w><C-h>', { desc = 'Move focus to the left wind
 vim.keymap.set('n', '<C-l>', '<C-w><C-l>', { desc = 'Move focus to the right window' })
 vim.keymap.set('n', '<C-j>', '<C-w><C-j>', { desc = 'Move focus to the lower window' })
 vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
-vim.keymap.set('n', ';', ':')
+-- vim.keymap.set('n', ';', ':')
 vim.keymap.set('i', 'kj', '<Esc>')
 vim.keymap.set('n', '<leader>tp', ':exe "!tmux send -t 1 \'"getline(".")"\' Enter"<cr>')
 
@@ -54,4 +54,19 @@ vim.api.nvim_create_autocmd('TextYankPost', {
   end,
 })
 
--- vim: ts=2 sts=2 sw=2 et
+-- 'ʂ': Unicode U+0282::642 (category Ll: Letter, lowercase)
+-- 'ə': Unicode U+0259::601 (category Ll: Letter, lowercase)
+-- 'ɨ': Unicode U+0268::616 (category Ll: Letter, lowercase)
+-- 'ŋ': Unicode U+014B::331 (category Ll: Letter, lowercase)
+-- 'ɹ': Unicode U+0279::633 (category Ll: Letter, lowercase)
+-- 'ɛ': Unicode U+025B::603 (category Ll: Letter, lowercase)
+-- 'ʊ': Unicode U+028A::650 (category Ll: Letter, lowercase)
+-- 'ɕ': Unicode U+0255::597 (category Ll: Letter, lowercase)
+-- 'ʊ': Unicode U+028A::650 (category Ll: Letter, lowercase)
+-- 'ɪ': Unicode U+026A::618 (category Ll: Letter, lowercase)
+-- 'ʻ': Unicode U+02BB::699 (category Lm: Letter, modifier)
+-- call digraph_set('ib', 'ɨ')
+-- digraph_set('ib', 'ɨ')
+-- vim.api.call(digraph_set('ib', 'ɨ'))
+-- vim.api.call(digraph_set('ib', 'ɨ'))
+-- -- vim: ts=2 sts=2 sw=2 et
