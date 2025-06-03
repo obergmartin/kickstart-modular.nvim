@@ -1,6 +1,7 @@
 -- [[ Basic Keymaps ]]
 --  See `:help vim.keymap.set()`
 
+local wk = require 'which-key'
 -- Clear highlights on search when pressing <Esc> in normal mode
 --  See `:help hlsearch`
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
@@ -32,7 +33,7 @@ vim.keymap.set('n', '<C-j>', '<C-w><C-j>', { desc = 'Move focus to the lower win
 vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
 -- vim.keymap.set('n', ';', ':')
 vim.keymap.set('i', 'kj', '<Esc>')
-vim.keymap.set('n', '<leader>tp', ':exe "!tmux send -t 1 \'"getline(".")"\' Enter"<cr>')
+-- vim.keymap.set('n', '<leader>tp', ':exe "!tmux send -t 1 \'"getline(".")"\' Enter"<cr>')
 
 -- NOTE: Some terminals have colliding keymaps or are not able to send distinct keycodes
 -- vim.keymap.set("n", "<C-S-h>", "<C-w>H", { desc = "Move window to the left" })
@@ -54,6 +55,10 @@ vim.api.nvim_create_autocmd('TextYankPost', {
   end,
 })
 
+wk.add {
+  { '<leader>r', group = 'iREPL' },
+  { '<leader>rt', '<cmd>Iron toggle_repl<cr>', desc = 'Toggle REPL', mode = 'n' },
+}
 -- 'ʂ': Unicode U+0282::642 (category Ll: Letter, lowercase)
 -- 'ə': Unicode U+0259::601 (category Ll: Letter, lowercase)
 -- 'ɨ': Unicode U+0268::616 (category Ll: Letter, lowercase)
