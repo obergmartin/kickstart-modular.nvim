@@ -65,24 +65,24 @@ return {
         -- available
         -- toggle_repl_with_cmd_1 = "<space>rv",
         -- toggle_repl_with_cmd_2 = "<space>rh",
-        -- toggle_repl = '<space>rt', -- toggles the repl open and closed.
-        restart_repl = '<space>tR', -- calls `IronRestart` to restart the repl
-        send_motion = '<space>sc',
-        visual_send = '<space>sc',
-        send_file = '<space>sf',
-        send_line = '<space>sl',
-        send_paragraph = '<space>sp',
-        send_until_cursor = '<space>su',
-        send_mark = '<space>sm',
-        send_code_block = '<space>sb',
-        send_code_block_and_move = '<space>rn',
-        mark_motion = '<space>mc',
-        mark_visual = '<space>mc',
-        remove_mark = '<space>md',
-        cr = '<space>s<cr>',
-        interrupt = '<space>s<space>',
-        exit = '<space>sq',
-        clear = '<space>cl',
+        toggle_repl = '<leader>rt', -- toggles the repl open and closed.
+        restart_repl = '<leader>rr', -- calls `IronRestart` to restart the repl
+        send_motion = '<leader>rc',
+        visual_send = '<leader>rc',
+        send_file = '<leader>rf',
+        send_line = '<leader>rl',
+        send_paragraph = '<leader>rp',
+        send_until_cursor = '<leader>ru',
+        send_mark = '<leader>rm',
+        send_code_block = '<leader>rb',
+        send_code_block_and_move = '<leader>rn',
+        -- mark_motion = '<leader>mc',
+        -- mark_visual = '<leader>mc',
+        -- remove_mark = '<leader>md',
+        cr = '<leader>r<cr>',
+        interrupt = '<leader>r<space>',
+        exit = '<leader>rq',
+        clear = '<leader>rl',
       },
       -- If the highlight is on, you can change how it looks
       -- For the available options, check nvim_set_hl
