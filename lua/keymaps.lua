@@ -1,7 +1,6 @@
 -- [[ Basic Keymaps ]]
 --  See `:help vim.keymap.set()`
 
-local wk = require 'which-key'
 -- Clear highlights on search when pressing <Esc> in normal mode
 --  See `:help hlsearch`
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
@@ -27,10 +26,10 @@ vim.keymap.set('t', '<Esc><Esc>', '<C-\\><C-n>', { desc = 'Exit terminal mode' }
 --  Use CTRL+<hjkl> to switch between windows
 --
 --  See `:help wincmd` for a list of all window commands
-vim.keymap.set('n', '<C-h>', '<C-w><C-h>', { desc = 'Move focus to the left window' })
-vim.keymap.set('n', '<C-l>', '<C-w><C-l>', { desc = 'Move focus to the right window' })
-vim.keymap.set('n', '<C-j>', '<C-w><C-j>', { desc = 'Move focus to the lower window' })
-vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
+-- vim.keymap.set('n', '<C-h>', '<C-w><C-h>', { desc = 'Move focus to the left window' })
+-- vim.keymap.set('n', '<C-l>', '<C-w><C-l>', { desc = 'Move focus to the right window' })
+-- vim.keymap.set('n', '<C-j>', '<C-w><C-j>', { desc = 'Move focus to the lower window' })
+-- vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
 -- vim.keymap.set('n', ';', ':')
 vim.keymap.set('i', 'kj', '<Esc>')
 -- vim.keymap.set('n', '<leader>tp', ':exe "!tmux send -t 1 \'"getline(".")"\' Enter"<cr>')
@@ -55,10 +54,8 @@ vim.api.nvim_create_autocmd('TextYankPost', {
   end,
 })
 
-wk.add {
-  { '<leader>r', group = 'iREPL' },
-  { '<leader>rt', '<cmd>Iron toggle_repl<cr>', desc = 'Toggle REPL', mode = 'n' },
-}
+-- vim.keymap.set('n', '<leader>r',  {group = 'iREPL'})
+-- vim.keymap.set('n', '<leader>rt', '<cmd>Iron toggle_repl<cr>', Iron.toggle_repl, {desc = 'Toggle REPL', mode = 'n'})
 -- 'ʂ': Unicode U+0282::642 (category Ll: Letter, lowercase)
 -- 'ə': Unicode U+0259::601 (category Ll: Letter, lowercase)
 -- 'ɨ': Unicode U+0268::616 (category Ll: Letter, lowercase)

@@ -71,4 +71,5 @@ vim.o.scrolloff = 10
 -- See `:help 'confirm'`
 vim.o.confirm = true
 
+vim.cmd 'digraph i7 616'
 -- vim: ts=2 sts=2 sw=2 et
