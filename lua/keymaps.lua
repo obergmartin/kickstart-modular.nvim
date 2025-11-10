@@ -44,6 +44,9 @@ vim.keymap.set('i', 'kj', '<Esc>')
 -- vim.keymap.set("n", "<C-S-j>", "<C-w>J", { desc = "Move window to the lower" })
 -- vim.keymap.set("n", "<C-S-k>", "<C-w>K", { desc = "Move window to the upper" })
 
+vim.keymap.set('n', '<leader>lp', 'vip:SlimeSend<cr>', { desc = 'Slime Send Paragraph' })
+vim.keymap.set('n', '<leader>ll', 'vV:SlimeSend<cr>', { desc = 'Slime Send Line' })
+
 -- [[ Basic Autocommands ]]
 --  See `:help lua-guide-autocommands`
 
