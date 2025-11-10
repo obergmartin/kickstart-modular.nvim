@@ -47,6 +47,9 @@ vim.keymap.set('i', 'kj', '<Esc>')
 vim.keymap.set('n', '<leader>lp', 'vip:SlimeSend<cr>', { desc = 'Slime Send Paragraph' })
 vim.keymap.set('n', '<leader>ll', 'vV:SlimeSend<cr>', { desc = 'Slime Send Line' })
 
+vim.keymap.set('n', '<leader>mm', "myGo# vim: sta:et:sw=4:ts=4:sts=4<C-[>'y", { desc = 'Insert Modeline' })
+
+vim.keymap.set('i', 'ppf', 'print(f"{}")<c-[>hhi')
 -- [[ Basic Autocommands ]]
 --  See `:help lua-guide-autocommands`
 
