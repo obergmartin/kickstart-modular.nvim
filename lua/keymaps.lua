@@ -44,9 +44,6 @@ vim.keymap.set('i', 'kj', '<Esc>')
 -- vim.keymap.set("n", "<C-S-j>", "<C-w>J", { desc = "Move window to the lower" })
 -- vim.keymap.set("n", "<C-S-k>", "<C-w>K", { desc = "Move window to the upper" })
 
-vim.keymap.set('n', '<leader>lp', 'vip:SlimeSend<cr>', { desc = 'Slime Send Paragraph' })
-vim.keymap.set('n', '<leader>ll', 'vV:SlimeSend<cr>', { desc = 'Slime Send Line' })
-
 vim.keymap.set('n', '<leader>mm', "myGo# vim: sta:et:sw=4:ts=4:sts=4<C-[>'y", { desc = 'Insert Modeline' })
 
 vim.keymap.set('i', 'ppf', 'print(f"{}")<c-[>hhi')
@@ -60,7 +57,7 @@ vim.api.nvim_create_autocmd('TextYankPost', {
   desc = 'Highlight when yanking (copying) text',
   group = vim.api.nvim_create_augroup('kickstart-highlight-yank', { clear = true }),
   callback = function()
-    vim.hl.on_yank()
+    -- vim.hl.on_yank()
   end,
 })
 
