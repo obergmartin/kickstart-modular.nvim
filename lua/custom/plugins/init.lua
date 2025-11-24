@@ -10,10 +10,12 @@ return {
       vim.g.slime_target = 'neovim'
     end,
     config = function()
-      vim.g.slime_cell_delimiter = '#%%'
+      vim.g.slime_cell_delimiter = '# %%'
       --    vim.keymap.set("x", "gz", "<Plug>SlimeRegionSend", { remap = true, silent = false })
-      vim.keymap.set('n', '<leader>tc', '<Plug>SlimeSendCell', { desc = 'SlimeSendCell' })
-      vim.keymap.set('n', '<leader>tp', 'vip:SlimeSend<cr>', { desc = 'Slime Send Paragraph' })
+      vim.keymap.set('n', '<leader>ll', 'vV:SlimeSend<cr>', { desc = 'Slime Send Line' })
+      vim.keymap.set('n', '<leader>lp', 'vip:SlimeSend<cr>', { desc = 'Slime Send Paragraph' })
+      vim.keymap.set('n', '<leader>lc', '<Plug>SlimeSendCell', { desc = 'SlimeSendCell' })
+      vim.keymap.set('n', '<leader>ls', ':call slime#send("plt.show()\\n") <CR>', { desc = 'plt.show()' })
     end,
   },
 }
