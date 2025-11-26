@@ -16,6 +16,7 @@ return {
       vim.keymap.set('n', '<leader>lp', 'vip:SlimeSend<cr>', { desc = 'Slime Send Paragraph' })
       vim.keymap.set('n', '<leader>lc', '<Plug>SlimeSendCell', { desc = 'SlimeSendCell' })
       vim.keymap.set('n', '<leader>ls', ':call slime#send("plt.show()\\n") <CR>', { desc = 'plt.show()' })
+      vim.keymap.set('n', '<leader>lr', ':call slime#send("foo", %) <CR>', { desc = 'plt.show()' })
     end,
   },
 }
