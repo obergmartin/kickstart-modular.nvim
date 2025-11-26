@@ -5,6 +5,12 @@
 --  See `:help hlsearch`
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
 
+local function ipy_run()
+  local fn = vim.fn.expand '%:t'
+  local cmd_str = '%run ' .. fn
+  vim.cmd('SlimeSend1' .. cmd_str)
+end
+vim.keymap.set('n', '<leader>lr', ipy_run, { desc = 'plt.show()' })
 -- Diagnostic keymaps
 vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostic [Q]uickfix list' })
 
