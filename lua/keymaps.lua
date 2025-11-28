@@ -14,6 +14,8 @@ vim.keymap.set('n', '<leader>lr', ipy_run, { desc = 'plt.show()' })
 -- Diagnostic keymaps
 vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostic [Q]uickfix list' })
 vim.keymap.set('n', 'tt', ':tab split<cr>')
+vim.keymap.set('n', '[v', ':tabprev<cr>', { desc = 'Prev View(tab)' })
+vim.keymap.set('n', ']v', ':tabnext<cr>', { desc = 'Next View(tab)' })
 
 -- Exit terminal mode in the builtin terminal with a shortcut that is a bit easier
 -- for people to discover. Otherwise, you normally need to press <C-\><C-n>, which
