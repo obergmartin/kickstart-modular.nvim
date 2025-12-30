@@ -16,6 +16,8 @@ vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagn
 vim.keymap.set('n', 'tt', ':tab split<cr>')
 vim.keymap.set('n', '[v', ':tabprev<cr>', { desc = 'Prev View(tab)' })
 vim.keymap.set('n', ']v', ':tabnext<cr>', { desc = 'Next View(tab)' })
+vim.keymap.set('n', '[b', ':bprev<cr>', { desc = 'Prev Buf' })
+vim.keymap.set('n', ']b', ':bnext<cr>', { desc = 'Next Buf' })
 
 -- Exit terminal mode in the builtin terminal with a shortcut that is a bit easier
 -- for people to discover. Otherwise, you normally need to press <C-\><C-n>, which
