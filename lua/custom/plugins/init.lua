@@ -19,4 +19,17 @@ return {
       vim.keymap.set('n', '<leader>lr', ':call slime#send("foo", %) <CR>', { desc = 'plt.show()' })
     end,
   },
+  {
+    'protex/better-digraphs.nvim',
+    -- version = 'unstable',
+    init = function()
+      -- vim.g.diagraph_map_sequences = {
+      --   insert = '<C-d>',
+      -- }
+    end,
+    config = function()
+      vim.keymap.set('i', '<C-k><C-k>', '<Cmd>lua require"better-digraphs".digraphs("insert")<CR>', { desc = 'digraph insert' })
+    end,
+  },
 }
+-- vim: ts=2 sts=2 sw=2 et
