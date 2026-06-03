@@ -31,5 +31,36 @@ return {
       vim.keymap.set('i', '<C-k><C-k>', '<Cmd>lua require"better-digraphs".digraphs("insert")<CR>', { desc = 'digraph insert' })
     end,
   },
+  {
+    'vimwiki/vimwiki',
+    init = function()
+      vim.g.vimwiki_path = '~/vimwiki/'
+      vim.g.vimwiki_list = {
+        {
+          path = '~/vimwiki',
+          syntax = 'markdown',
+          ext = 'md',
+        },
+        {
+          path = '~/vimwikiwork',
+          syntax = 'markdown',
+          ext = 'md',
+        },
+      }
+      vim.g.vimwiki_syntax = 'markdown'
+      vim.g.vimwiki_ext = 'md'
+      vim.g.vimwiki_auto_header = 1
+    end,
+  },
+  {
+    'mattn/calendar-vim',
+  },
+  -- {
+  --   'lervag/wiki.vim',
+  --   -- tag = "v0.10", -- uncomment to pin to a specific release
+  --   init = function()
+  --     -- wiki.vim configuration goes here, e.g.
+  --   end,
+  -- },
 }
 -- vim: ts=2 sts=2 sw=2 et
